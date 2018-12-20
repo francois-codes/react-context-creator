@@ -1,0 +1,71 @@
+{
+  "name": "react-context-creator",
+  "version": "1.0.0",
+  "description": "Easy React context",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/jest -w 2",
+    "clean": "rm -rf ./lib",
+    "build": "node_modules/.bin/babel ./src -d ./lib",
+    "prepublish": "yarn clean && yarn test && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f-roland/react-context.git"
+  },
+  "keywords": [
+    "React",
+    "Context"
+  ],
+  "author": "f.roland@applicaster.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f-roland/react-context/issues"
+  },
+  "homepage": "https://github.com/f-roland/react-context#readme",
+  "dependencies": {
+    "create-react-context": "^0.2.3",
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-native": "^4.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^23.6.0",
+    "jest-babel": "^1.0.1",
+    "jest-extended": "^0.11.0",
+    "jest-react": "^0.5.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "jest": {
+    "testRegex": "/__tests__/.*(\\.test.js|\\test.jsx)$",
+    "setupTestFrameworkScriptFile": "<rootDir>test-setup.js",
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "__tests__",
+      "node_modules"
+    ],
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "peerDependencies": {
+    "react": "^16.7.0"
+  }
+}
