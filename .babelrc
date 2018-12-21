@@ -1,8 +1,8 @@
 {
-  "presets": ["react-native"],
+  "presets": ["env", "flow", "react-native"],
   "env": {
     "test": {
-      "presets": [["env", { "modules": false }], "react-native"]
+      "presets": [["env", { "module": false }], "flow", "react-native"]
     }
   }
 }
